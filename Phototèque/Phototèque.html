@@ -1,11 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Phototèque</title>
         <link rel="icon" href="./potiblagueur">
         <meta name="Phototèque" lang="fr" content="Phototèque"  />
         <meta charset= "utf-8" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="Style.css" media="all" rel="stylesheet" type="text/css" />
+        
     </head>
     
     <body>
@@ -22,7 +24,28 @@
             </div>
         </div>  
         </div>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-foot-tab" data-toggle="tab" href="#nav-foot" role="tab" aria-controls="nav-foot" aria-selected="true">Foot</a>
+              <a class="nav-item nav-link" id="nav-rl-tab" data-toggle="tab" href="#nav-rl" role="tab" aria-controls="nav-rl" aria-selected="false">RocketLeague</a>
+              <a class="nav-item nav-link" id="nav-lol-tab" data-toggle="tab" href="#nav-lol" role="tab" aria-controls="nav-lol" aria-selected="false">LeagueOfLegends</a>
+              <a class="nav-item nav-link" id="nav-tennis-tab" data-toggle="tab" href="#nav-tennis" role="tab" aria-controls="nav-tennis" aria-selected="false">Tennis</a>
+              <a class="nav-item nav-link" id="nav-onepiece-tab" data-toggle="tab" href="#nav-onepiece" role="tab" aria-controls="nav-onepiece" aria-selected="false">OnePiece</a>
+              <a class="nav-item nav-link" id="nav-naruto-tab" data-toggle="tab" href="#nav-naruto" role="tab" aria-controls="nav-naruto" aria-selected="false">Naruto</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-foot" role="tabpanel" aria-labelledby="nav-foot-tab"><img class="photo" src="./foot2.jpg"><img class="photo" src="./foot4.jpg"><img class="photo" src="./foot5.jpg"><img class="photo" src="./foot6.jpg"></div>
+            <div class="tab-pane fade" id="nav-rl" role="tabpanel" aria-labelledby="nav-rl-tab"><img class="photo" src="./rl1.jpg"><img class="photo" src="./rl2.webp"><img class="photo" src="./rl3.png"><img class="photo" src="./rl4.webp"></div>
+            <div class="tab-pane fade" id="nav-lol" role="tabpanel" aria-labelledby="nav-lol-tab"><img class="photo" src="./lol1.jpg"><img class="photo" src="./lol2.jpg"><img class="photo" src="./lol3.jpg"><img class="photo" src="./lol4.jpg"></div>
+            <div class="tab-pane fade" id="nav-tennis" role="tabpanel" aria-labelledby="nav-tennis-tab"><img class="photo" src="./tennis1.webp"><img class="photo" src="./tennis2.jpg"><img class="photo" src="./tennis3.jpg"><img class="photo" src="./tennis4.jpg"></div>
+            <div class="tab-pane fade" id="nav-onepiece" role="tabpanel" aria-labelledby="nav-onepiece-tab"><img class="photo" src="./onepiece1.webp"><img class="photo" src="./onepiece2.jpg"><img class="photo" src="./onepiece3.webp"><img class="photo" src="./onepiece4.jpg"></div>    
+            <div class="tab-pane fade" id="nav-naruto" role="tabpanel" aria-labelledby="nav-naruto-tab"><img class="photo" src="./naruto1.webp"><img class="photo" src="./naruto2.jpg"><img class="photo" src="./naruto3.jpg"><img class="photo" src="./naruto4.webp"></div>
+          </div>
         <footer>Mathys Derrien - BTS SIO 1 <a href="https://github.com/MathysDR"><img class="icone" src="./icons8-github-30.png"></a></footer>
         <script src="./Script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>

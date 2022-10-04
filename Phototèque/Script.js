@@ -1,7 +1,8 @@
-﻿const container = document.querySelector(".container");
+const container = document.querySelector(".container");
 const containerCarrousel = container.querySelector(".container-carrousel");
 const carrousel = container.querySelector(".carrousel");
 const carrouselItems = carrousel.querySelectorAll(".carrousel-item");
+
 
 // Iniciamos variables que cambiaran su estado.
 let isMouseDown = false;
@@ -119,7 +120,6 @@ const initEvents = () => {
     "touchmove",
     e => isMouseDown && getPosX(e.touches[0].clientX)
   );
-
   window.addEventListener("resize", createCarrousel);
 
   update();
