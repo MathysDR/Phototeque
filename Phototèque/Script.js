@@ -3,13 +3,14 @@ const containerCarrousel = container.querySelector(".container-carrousel");
 const carrousel = container.querySelector(".carrousel");
 const carrouselItems = carrousel.querySelectorAll(".carrousel-item");
 
-
 // Iniciamos variables que cambiaran su estado.
-let isMouseDown = false;
+let isMouseDown = true;
 let currentMousePos = 0;
 let lastMousePos = 0;
 let lastMoveTo = 0;
 let moveTo = 0;
+var cellCount = 6;
+var selectedIndex =0;
 
 const createCarrousel = () => {
   const carrouselProps = onResize();
@@ -72,6 +73,7 @@ const getPosX = x => {
 };
 
 const update = () => {
+  //debugger;
   lastMoveTo = lerp(moveTo, lastMoveTo, 0.05);
   carrousel.style.setProperty("--rotatey", lastMoveTo + "deg");
 
@@ -89,6 +91,24 @@ const onResize = () => {
 
   return carrouselProps;
 };
+
+function rotateCarousel() {
+  lastMoveTo = selectedIndex * -60;
+  currentMousePos = lastMoveTo;
+  lastMousePos = currentMousePos;
+  moveTo = lastMousePos;
+  selectedIndex++;
+  if(selectedIndex == 6 ){
+    selectedIndex = 0;
+  };
+}
+
+
+
+function timer(){
+  console.log('test');
+  rotateCarousel();
+}
 
 const initEvents = () => {
   // Eventos del mouse
@@ -118,7 +138,9 @@ const initEvents = () => {
   });
   container.addEventListener(
     "touchmove",
-    e => isMouseDown && getPosX(e.touches[0].clientX)
+    function (e) {
+      //isMouseDown && getPosX(e.touches[0].clientX)
+    }
   );
   window.addEventListener("resize", createCarrousel);
 
@@ -127,3 +149,9 @@ const initEvents = () => {
 };
 
 initEvents();
+setInterval(function(){timer()},3000);
+// installation jquerry pour après selection de tes items pour les activés et désactivé 
+  // $(".carrousel-item.tennis").click(function() {
+  //   $('.nav-item.nav-link.active').removeClass('nav-item.nav-link.active').addClass('nav-item nav-link');
+  //   $('#nav-tennis-tab').removeClass('nav-item nav-link').addClass('nav-item nav-link active');
+  // });
